@@ -69,7 +69,7 @@ export default function Questions() {
   }, []);
 
   return (
-    <div className="flex justify-center items-center lg:h-screen relative overflow-x-hidden bg-[#F5F7FB]">
+    <div className="flex justify-center items-center lg:h-screen relative overflow-x-hidden bg-slate-50">
       <img
         src="/assets/blob 5.png"
         alt=""
