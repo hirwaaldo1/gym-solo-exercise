@@ -8,7 +8,7 @@
 
 In this landing page project we have the following sections done:
 
-- [x] Die
+- [x] Questions list
 
 ## Technologies Used
 
