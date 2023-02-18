@@ -2,7 +2,7 @@
 
 ## Live version
 
-[Quizzical App on netlify](https://dQuizzicalApp.app/)
+[Quizzical App on netlify](https://hilarious-fudge-fe7bbc.netlify.app/)
 
 ## Contents
 
