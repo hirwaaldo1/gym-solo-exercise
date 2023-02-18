@@ -8,15 +8,16 @@ const Question = (props) => {
   let styleQue = props.checkAns
     ? selected === props.value.correct_answer
       ? "bg-green-900  text-white border-none"
-      : "bg-red-900  text-white border-none"
-    : "bg-[#D6DBF5] text-[#293264] border-none";
+      : "bg-red-900  text-white border-none opacity-50"
+    : "bg-violet-200 text-slate-700 border-none";
+
   return (
     <div className=" border-b py-2">
       <h2
-        className="text-xl font-semibold text-[#293264]"
+        className="text-xl font-semibold text-slate-700"
         dangerouslySetInnerHTML={{ __html: props.value.question }}
       ></h2>
-      <div className="flex gap-2 my-3">
+      <div className="flex gap-2 lg:flex-nowrap flex-wrap my-3">
         {allAnswer.sort().map((v, k) => {
           return (
             <div
@@ -37,7 +38,7 @@ const Question = (props) => {
               ${
                 props.checkAns && props.value.correct_answer === v
                   ? "bg-green-900 text-white border-none"
-                  : "border-[#293264]"
+                  : "border-slate-700"
               }
               `}
             >
@@ -54,6 +55,7 @@ export default function Questions() {
   const [countCorrect, setCountCorrect] = useState(0);
   const [checkAns, setCheckAns] = useState(false);
   const [allClientAnswer, setAllClientAnswer] = useState(data);
+
   useEffect(() => {
     fetch("https://opentdb.com/api.php?amount=5")
       .then((res) => res.json())
@@ -67,23 +69,22 @@ export default function Questions() {
   }, []);
 
   return (
-    <div className="flex justify-center items-center h-screen relative overflow-x-hidden bg-[#F5F7FB]">
+    <div className="flex justify-center items-center lg:h-screen relative overflow-x-hidden bg-[#F5F7FB]">
       <img
         src="/assets/blob 5.png"
         alt=""
         width={297}
         height={235}
-        className="absolute -right-20 top-0"
+        className="absolute hidden lg:block -right-20 top-0"
       />
       <img
         src="/assets/blob 5 (1).png"
         alt=""
         width={297}
         height={235}
-        className="absolute -left-20 bottom-0"
+        className="absolute -left-20 bottom-0 hidden lg:block"
       />
       <div className="w-[70%] flex flex-col gap-3 ">
-        {data.length === 0 && <p className="text-center text-xl">Wait...</p>}
         {data.map((v, k) => {
           return (
             <Question
@@ -108,7 +109,7 @@ export default function Questions() {
               onClick={() => {
                 window.location.reload();
               }}
-              className="bg-blue-500 text-white px-8 pt-4 pb-5 text-2xl rounded-2xl mt-4 w-fit m-auto"
+              className="bg-primary text-white px-8 pt-4 pb-5 text-2xl rounded-2xl mt-4 w-fit m-auto"
             >
               Play again
             </button>
@@ -118,7 +119,7 @@ export default function Questions() {
             onClick={() => {
               setCheckAns(true);
             }}
-            className="bg-blue-500 text-white px-8 pt-4 pb-5 text-2xl rounded-2xl mt-4 w-fit m-auto"
+            className="bg-primary text-xl w-full lg:w-1/5 text-white px-8 pt-4 pb-5 rounded-2xl "
           >
             {data.length === 0 ? "please wait" : "Check answers"}
           </button>

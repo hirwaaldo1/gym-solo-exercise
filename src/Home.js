@@ -17,13 +17,13 @@ function Home() {
         height={235}
         className="absolute left-0 bottom-0"
       />
-      <div className="w-5/12 text-center">
-        <h1 className="text-5xl font-semibold text-[#293264] mb-3">
+      <div className="w-1/2 md:w-5/12 text-center">
+        <h1 className="text-4xl font-semibold text-slate-700 mb-3">
           Quizzical
         </h1>
-        <p className="text-base">Some description if needed</p>
+        <p className="text-xl text-slate-700">Some description if needed</p>
         <Link to={"/questions"}>
-          <button className="bg-blue-500 text-white px-8 pt-4 pb-5 text-2xl rounded-lg mt-4">
+          <button className="bg-primary text-xl w-2/5 text-white px-8 pt-4 pb-5 rounded-2xl mt-4">
             Start quiz
           </button>
         </Link>
