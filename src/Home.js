@@ -5,14 +5,14 @@ function Home() {
     <div className="flex justify-center items-center h-screen">
       <img
         src="/assets/blob 5.png"
-        alt=""
+        alt="blob 5"
         width={297}
         height={235}
         className="absolute right-0 top-0"
       />
       <img
         src="/assets/blob 5 (1).png"
-        alt=""
+        alt="blob 6"
         width={297}
         height={235}
         className="absolute left-0 bottom-0"

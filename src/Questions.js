@@ -72,14 +72,14 @@ export default function Questions() {
     <div className="flex justify-center items-center lg:h-screen relative overflow-x-hidden bg-slate-50">
       <img
         src="/assets/blob 5.png"
-        alt=""
+        alt="blob 5"
         width={297}
         height={235}
         className="absolute hidden lg:block -right-20 top-0"
       />
       <img
         src="/assets/blob 5 (1).png"
-        alt=""
+        alt="blob 6"
         width={297}
         height={235}
         className="absolute -left-20 bottom-0 hidden lg:block"
